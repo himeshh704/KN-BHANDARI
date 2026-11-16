@@ -1,140 +1,78 @@
 /**
- * K. N. BHANDARI — CINEMATIC PERSONAL LEGACY WEBSITE
- * Motion & Interactivity Engine (GSAP, ScrollTrigger, Archival Gallery, Mobile Drawer)
+ * K. N. Bhandari — Digital Legacy Portfolio
+ * Robust, mobile-first motion and interaction engine
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeroMotion();
   initScrollAnimations();
   initHorizontalGallery();
-  initSearchCatalog();
 });
 
 // --------------------------------------------------------------------------
-// 1. HERO ENTRANCE ANIMATION (Slow, deliberate, cinematic)
+// 1. HERO ENTRANCE ANIMATION (Safe, non-destructive, mobile-friendly)
 // --------------------------------------------------------------------------
 function initHeroMotion() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   if (typeof gsap === 'undefined') return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-
-  // Archival collage panels staggered reveal
-  tl.from('.hero-collage-panel', {
-    duration: 1.4,
-    opacity: 0,
-    y: 35,
-    scale: 0.96,
-    stagger: 0.12,
-    delay: 0.2
-  });
-
-  // Small uppercase label
-  tl.from('.hero-label', {
-    duration: 1.0,
-    opacity: 0,
-    y: 15,
-    letterSpacing: '0.4em'
-  }, '-=1.0');
-
-  // Main heading lines
-  tl.from('.hero-title-line-1', {
-    duration: 1.2,
-    opacity: 0,
-    y: 40,
-    rotateX: -10
-  }, '-=0.8');
-
-  tl.from('.hero-title-line-2', {
-    duration: 1.3,
-    opacity: 0,
-    y: 45,
-    rotateX: -15
-  }, '-=0.9');
-
-  // Supporting narrative
-  tl.from('.hero-desc', {
-    duration: 1.1,
-    opacity: 0,
-    y: 25
-  }, '-=0.8');
-
-  // CTA button and badges
-  tl.from('.hero-cta-group', {
-    duration: 1.0,
-    opacity: 0,
-    y: 20
-  }, '-=0.7');
+  // Gentle entrance without permanent opacity 0 failure modes
+  gsap.fromTo('.hero-collage-panel', 
+    { opacity: 0.4, scale: 0.98, y: 15 },
+    { opacity: 1, scale: 1, y: 0, duration: 0.8, stagger: 0.08, ease: 'power2.out' }
+  );
 }
 
 // --------------------------------------------------------------------------
-// 2. SCROLL REVEALS & PARALLAX
+// 2. SCROLL REVEALS & PARALLAX (FAIL-SAFE: Content ALWAYS visible)
 // --------------------------------------------------------------------------
 function initScrollAnimations() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // Section Headers Reveal
+  // Milestone Cards: Never set opacity to 0! Gently animate from 0.85
+  const milestoneCards = document.querySelectorAll('.milestone-card');
+  if (milestoneCards.length > 0) {
+    gsap.fromTo(milestoneCards,
+      { y: 20, opacity: 0.85 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        stagger: 0.15,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '.milestones-grid',
+          start: 'top 90%',
+          toggleActions: 'play none none none'
+        }
+      }
+    );
+  }
+
+  // Section Headers: Gentle lift without hiding content
   gsap.utils.toArray('.reveal-header').forEach(header => {
-    gsap.from(header, {
-      scrollTrigger: {
-        trigger: header,
-        start: 'top 85%',
-        toggleActions: 'play none none none'
-      },
-      duration: 1.2,
-      opacity: 0,
-      y: 40,
-      ease: 'power3.out'
-    });
-  });
-
-  // Milestone Cards Stagger
-  gsap.from('.milestone-card', {
-    scrollTrigger: {
-      trigger: '.milestones-grid',
-      start: 'top 80%'
-    },
-    duration: 1.2,
-    opacity: 0,
-    y: 50,
-    stagger: 0.2,
-    ease: 'power3.out'
-  });
-
-  // Archival Story Cards
-  gsap.utils.toArray('.editorial-card').forEach(card => {
-    gsap.from(card, {
-      scrollTrigger: {
-        trigger: card,
-        start: 'top 88%'
-      },
-      duration: 1.1,
-      opacity: 0,
-      y: 35,
-      ease: 'power2.out'
-    });
-  });
-
-  // Parallax subtle background movement
-  gsap.utils.toArray('.parallax-image').forEach(img => {
-    gsap.to(img, {
-      scrollTrigger: {
-        trigger: img,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 1.5
-      },
-      y: -30,
-      ease: 'none'
-    });
+    gsap.fromTo(header,
+      { y: 20, opacity: 0.85 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: header,
+          start: 'top 90%',
+          toggleActions: 'play none none none'
+        }
+      }
+    );
   });
 }
 
 // --------------------------------------------------------------------------
-// 3. HORIZONTAL ARCHIVAL GALLERY (Section 4)
+// 3. HORIZONTAL ARCHIVAL GALLERY
 // --------------------------------------------------------------------------
 function initHorizontalGallery() {
   const track = document.getElementById('horizontal-gallery-track');
@@ -144,10 +82,10 @@ function initHorizontalGallery() {
 
   if (prevBtn && nextBtn) {
     prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -420, behavior: 'smooth' });
+      track.scrollBy({ left: -320, behavior: 'smooth' });
     });
     nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: 420, behavior: 'smooth' });
+      track.scrollBy({ left: 320, behavior: 'smooth' });
     });
   }
 }

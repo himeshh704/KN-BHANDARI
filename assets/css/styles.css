@@ -188,3 +188,92 @@ html {
     scroll-behavior: auto !important;
   }
 }
+
+
+/* Additional Mobile-First & Fail-Safe Styles */
+
+/* Ensure Milestone Cards are NEVER invisible under any circumstances */
+.milestones-grid {
+  display: grid !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.milestone-card {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: flex !important;
+}
+
+/* Smooth mobile-first responsive utilities */
+@media (max-width: 640px) {
+  .hero-collage-panel {
+    min-height: 120px;
+  }
+}
+
+/* Ensure horizontal gallery supports smooth touch swiping on mobile */
+#horizontal-gallery-track {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+#horizontal-gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ==========================================================================
+   MOBILE-FIRST GLOBAL RESPONSIVE RULES & POLISH
+   ========================================================================== */
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Ensure all images scale without distortion on mobile screens */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile-First Touch Targets */
+a, button {
+  touch-action: manipulation;
+}
+
+/* Ensure Milestone Cards are ALWAYS completely visible */
+.milestones-grid, 
+.milestones-grid * {
+  visibility: visible !important;
+}
+
+.milestone-card {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: flex !important;
+  transform: none !important;
+}
+
+/* Responsive typography adjustments for small mobile devices */
+@media (max-width: 640px) {
+  h1 {
+    word-break: break-word;
+  }
+  
+  .hero-collage-panel {
+    min-height: 110px;
+  }
+
+  /* Padding adjustments for tight mobile screens */
+  .px-6 {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  /* Mobile navigation header comfort */
+  header .h-20 {
+    height: 4.5rem !important;
+  }
+}
