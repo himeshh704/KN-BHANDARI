@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curatorial Office &amp; Inquiries — Mr. Kailash Nath Bhandari | K. N. BHANDARI</title>
+  <meta name="description" content="Transmit official correspondence, academic citations, governance inquiries, or archival research communiques to the Curatorial Secretariat of Mr. Kailash Nath Bhandari."/>
+
+  <!-- Fonts: Cormorant Garamond, Playfair Display, Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            burgundy: {
+              DEFAULT: '#651D2A',
+              primary: '#651D2A',
+              deep: '#310D15',
+              muted: '#B88D89',
+              light: '#832837'
+            },
+            ivory: {
+              DEFAULT: '#F4EFE7',
+              warm: '#F4EFE7'
+            },
+            parchment: {
+              DEFAULT: '#E9DFD1',
+              dark: '#DDD0C0'
+            },
+            charcoal: {
+              DEFAULT: '#252222',
+              soft: '#383333'
+            },
+            gold: {
+              antique: '#A98A62',
+              light: '#C4A982'
+            }
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            editorial: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Manrope"', '-apple-system', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-ivory text-charcoal antialiased selection:bg-burgundy selection:text-ivory overflow-x-hidden texture-paper flex flex-col min-h-screen">
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 w-full z-50 bg-ivory/90 backdrop-blur-md border-b border-burgundy/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between gap-6">
+      <a class="flex items-center space-x-3 shrink-0 group focus:outline-none" href="index.html">
+        <div class="w-8 h-8 rounded-full bg-burgundy flex items-center justify-center text-ivory text-xs font-serif font-bold tracking-wider">
+          KB
+        </div>
+        <div class="flex flex-col whitespace-nowrap">
+          <span class="font-display text-xl sm:text-2xl font-bold tracking-widest uppercase text-burgundy-deep group-hover:text-burgundy transition-colors">
+            K. N. BHANDARI
+          </span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-burgundy font-sans font-semibold">
+            Curatorial Office
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center space-x-7">
+        <a class="text-charcoal/80 hover:text-burgundy text-xs uppercase tracking-widest font-sans transition-colors" href="index.html">Home</a>
+        <a class="text-charcoal/80 hover:text-burgundy text-xs uppercase tracking-widest font-sans transition-colors" href="about.html">About</a>
+        <a class="text-charcoal/80 hover:text-burgundy text-xs uppercase tracking-widest font-sans transition-colors" href="journey.html">Journey</a>
+        <a class="text-charcoal/80 hover:text-burgundy text-xs uppercase tracking-widest font-sans transition-colors" href="leadership.html">Leadership</a>
+        <a class="text-charcoal/80 hover:text-burgundy text-xs uppercase tracking-widest font-sans transition-colors" href="governance.html">Governance</a>
+        <a class="text-charcoal/80 hover:text-burgundy text-xs uppercase tracking-widest font-sans transition-colors" href="contributions.html">Contributions</a>
+        <a class="text-burgundy font-semibold border-b-2 border-burgundy pb-1 text-xs uppercase tracking-widest font-sans" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="flex items-center space-x-3.5 shrink-0">
+        <button onclick="openSearchModal()" title="Search Archival Record (Ctrl+K)" class="hidden sm:inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border border-burgundy/20 hover:border-burgundy text-charcoal/80 hover:text-burgundy text-xs font-sans uppercase tracking-wider transition-colors">
+          <span class="material-symbols-outlined text-[15px] text-burgundy">search</span>
+          <span>Archive</span>
+          <kbd class="ml-1 text-[9px] text-burgundy/60 font-mono">⌘K</kbd>
+        </button>
+
+        <a href="contact.html" class="hidden sm:inline-flex items-center space-x-2 px-6 py-2.5 rounded-full bg-burgundy hover:bg-burgundy-deep text-ivory text-xs uppercase tracking-widest font-sans font-semibold shadow-sm transition-all duration-300">
+          <span>Inquire</span>
+        </a>
+
+        <button aria-label="Toggle Navigation" onclick="toggleMobileMenu()" class="lg:hidden p-2 text-burgundy hover:text-burgundy-deep focus:outline-none">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex justify-end">
+    <div class="w-80 max-w-full bg-ivory border-l border-burgundy/20 h-full p-6 shadow-2xl flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-burgundy/15">
+          <div class="flex flex-col">
+            <span class="font-display text-2xl font-bold tracking-widest uppercase text-burgundy-deep">K. N. BHANDARI</span>
+            <span class="text-[10px] text-burgundy tracking-widest uppercase font-sans">Curatorial Office</span>
+          </div>
+          <button onclick="toggleMobileMenu()" class="p-1 text-charcoal hover:text-burgundy">
+            <span class="material-symbols-outlined text-2xl">close</span>
+          </button>
+        </div>
+
+        <nav class="flex flex-col space-y-4 mt-8">
+          <a onclick="toggleMobileMenu()" class="text-charcoal hover:text-burgundy text-xs uppercase tracking-widest font-sans py-1.5" href="index.html">Home</a>
+          <a onclick="toggleMobileMenu()" class="text-charcoal hover:text-burgundy text-xs uppercase tracking-widest font-sans py-1.5" href="about.html">About &amp; Biography</a>
+          <a onclick="toggleMobileMenu()" class="text-charcoal hover:text-burgundy text-xs uppercase tracking-widest font-sans py-1.5" href="journey.html">Career Journey</a>
+          <a onclick="toggleMobileMenu()" class="text-charcoal hover:text-burgundy text-xs uppercase tracking-widest font-sans py-1.5" href="leadership.html">Insurance Leadership</a>
+          <a onclick="toggleMobileMenu()" class="text-charcoal hover:text-burgundy text-xs uppercase tracking-widest font-sans py-1.5" href="governance.html">Corporate Governance</a>
+          <a onclick="toggleMobileMenu()" class="text-charcoal hover:text-burgundy text-xs uppercase tracking-widest font-sans py-1.5" href="contributions.html">Education &amp; Contributions</a>
+          <a onclick="toggleMobileMenu()" class="text-burgundy font-semibold text-xs uppercase tracking-widest font-sans py-1.5 border-b border-burgundy/20" href="contact.html">Curatorial Office</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-burgundy/20">
+        <a class="block w-full text-center py-3 rounded-full bg-burgundy text-ivory text-xs uppercase tracking-widest font-sans font-semibold hover:bg-burgundy-deep transition-colors" href="contact.html">
+          Transmit Inquiry
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-grow">
+    <!-- Header Hero Banner -->
+    <section class="py-16 md:py-24 border-b border-burgundy/15 bg-ivory">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="flex items-center space-x-3 mb-4">
+          <span class="w-8 h-px bg-burgundy"></span>
+          <span class="text-xs uppercase tracking-[0.3em] font-sans font-bold text-burgundy">OFFICIAL SECRETARIAT &amp; ARCHIVAL REGISTRY</span>
+        </div>
+        <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl text-charcoal font-medium max-w-4xl leading-[1.08]">
+          Curatorial Office &amp; <br/>
+          <span class="italic text-burgundy font-normal">Professional Inquiries</span>
+        </h1>
+        <p class="font-sans text-base sm:text-lg text-charcoal/70 font-light max-w-2xl mt-6 leading-relaxed">
+          For archival research access, academic citations, governance history, or official correspondence, kindly transmit your communication through the designated registry.
+        </p>
+      </div>
+    </section>
+
+    <!-- Two-Column Form & Registry Office Details -->
+    <section class="py-20 md:py-28 bg-parchment/30">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          
+          <!-- Left Column: Registry Information (5 cols) -->
+          <div class="lg:col-span-5 space-y-8">
+            <div class="bg-ivory p-8 rounded-2xl border border-burgundy/25 shadow-lg space-y-6">
+              <span class="text-xs uppercase tracking-widest text-burgundy font-sans font-bold">Designated Secretariats</span>
+              
+              <div class="flex items-start space-x-4 pt-4 border-t border-burgundy/15">
+                <div class="w-10 h-10 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy shrink-0">
+                  <span class="material-symbols-outlined text-lg">location_on</span>
+                </div>
+                <div>
+                  <h4 class="font-display text-lg text-charcoal font-bold">Mumbai Secretariat</h4>
+                  <p class="font-sans text-xs text-charcoal/70 mt-1">Corporate &amp; Board Governance Liaison Office</p>
+                  <span class="text-xs font-mono text-charcoal/60 mt-0.5 block">Nariman Point / Fort, Mumbai, Maharashtra</span>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4 pt-4 border-t border-burgundy/15">
+                <div class="w-10 h-10 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy shrink-0">
+                  <span class="material-symbols-outlined text-lg">domain</span>
+                </div>
+                <div>
+                  <h4 class="font-display text-lg text-charcoal font-bold">Jodhpur Secretariat</h4>
+                  <p class="font-sans text-xs text-charcoal/70 mt-1">Civic, Educational &amp; Community Trusts Office</p>
+                  <span class="text-xs font-mono text-charcoal/60 mt-0.5 block">Sardarpura / High Court Road, Jodhpur, Rajasthan</span>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4 pt-4 border-t border-burgundy/15">
+                <div class="w-10 h-10 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy shrink-0">
+                  <span class="material-symbols-outlined text-lg">mail</span>
+                </div>
+                <div>
+                  <h4 class="font-display text-lg text-charcoal font-bold">Official Archival Registry</h4>
+                  <p class="font-sans text-xs text-charcoal/70 mt-1">Electronic dispatch for verified historical citations</p>
+                  <span class="text-xs font-mono text-burgundy font-semibold mt-0.5 block">secretariat@knbhandari.org</span>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-burgundy/15">
+                <span class="text-[10px] font-mono uppercase tracking-widest text-gold-antique block">Director Identification Number (DIN)</span>
+                <span class="font-mono text-sm font-bold text-charcoal">00026078</span>
+              </div>
+            </div>
+
+            <div class="bg-ivory p-6 rounded-2xl border border-burgundy/20">
+              <h4 class="text-xs uppercase tracking-widest text-burgundy font-sans font-bold flex items-center mb-2">
+                <span class="material-symbols-outlined text-base mr-1.5">lock</span>
+                Confidentiality Notice
+              </h4>
+              <p class="font-sans text-xs text-charcoal/70 leading-relaxed font-light">
+                All communications received by this curatorial office are handled in strict fiduciary confidence. Personal private telephone numbers and unverified contact channels are strictly excluded in accordance with the estate protocol.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Communique Form (7 cols) -->
+          <div class="lg:col-span-7 bg-ivory p-8 sm:p-10 rounded-3xl border border-burgundy/25 shadow-xl">
+            <h3 class="font-display text-3xl text-charcoal mb-2">Transmit Formal Communique</h3>
+            <p class="font-sans text-xs text-charcoal/70 mb-8 font-light">
+              Fields marked with an asterisk are required to ensure authenticated logging into the official register.
+            </p>
+
+            <form class="space-y-6" onsubmit="event.preventDefault(); alert('Your formal communique has been logged into the curatorial register.'); this.reset();">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-charcoal font-sans font-semibold mb-2">Full Name *</label>
+                  <input type="text" required placeholder="e.g. Dr. Rajeshwar Sen" class="w-full bg-parchment/60 border border-burgundy/20 focus:border-burgundy focus:ring-1 focus:ring-burgundy p-3.5 text-sm text-charcoal placeholder:text-charcoal/40 rounded-xl outline-none"/>
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-charcoal font-sans font-semibold mb-2">Institutional Affiliation</label>
+                  <input type="text" placeholder="e.g. National Law University / Industry Body" class="w-full bg-parchment/60 border border-burgundy/20 focus:border-burgundy focus:ring-1 focus:ring-burgundy p-3.5 text-sm text-charcoal placeholder:text-charcoal/40 rounded-xl outline-none"/>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-charcoal font-sans font-semibold mb-2">Official Email *</label>
+                  <input type="email" required placeholder="name@institution.org" class="w-full bg-parchment/60 border border-burgundy/20 focus:border-burgundy focus:ring-1 focus:ring-burgundy p-3.5 text-sm text-charcoal placeholder:text-charcoal/40 rounded-xl outline-none"/>
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-charcoal font-sans font-semibold mb-2">Inquiry Classification *</label>
+                  <select class="w-full bg-parchment/60 border border-burgundy/20 focus:border-burgundy focus:ring-1 focus:ring-burgundy p-3.5 text-sm text-charcoal rounded-xl outline-none">
+                    <option>Corporate Governance &amp; Board Inquiries</option>
+                    <option>Insurance History &amp; Academic Citations</option>
+                    <option>NLU Jodhpur &amp; Educational Research</option>
+                    <option>Jodhpur Heritage &amp; Community Trusts</option>
+                    <option>General Archival Inquiries</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider text-charcoal font-sans font-semibold mb-2">Statement of Purpose / Message *</label>
+                <textarea rows="5" required placeholder="Please outline the context of your correspondence or archival research scope..." class="w-full bg-parchment/60 border border-burgundy/20 focus:border-burgundy focus:ring-1 focus:ring-burgundy p-3.5 text-sm text-charcoal placeholder:text-charcoal/40 rounded-xl outline-none"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-full bg-burgundy hover:bg-burgundy-deep text-ivory text-xs uppercase tracking-widest font-sans font-bold shadow-lg shadow-burgundy/20 transition-all duration-300 hover:scale-[1.01] cursor-pointer">
+                Submit Formal Inquiry to Secretariat
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal Dark Burgundy Footer -->
+  <footer class="w-full bg-burgundy-deep text-ivory border-t border-burgundy/40">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-16 flex flex-col space-y-12">
+      <div class="flex flex-col md:flex-row md:items-center justify-between pb-8 border-b border-burgundy/30 gap-6">
+        <div>
+          <span class="font-display text-3xl font-bold tracking-widest uppercase text-ivory block">K. N. BHANDARI</span>
+          <span class="text-xs text-gold-light uppercase tracking-[0.25em] font-sans font-semibold block mt-1">One Life. Many Chapters.</span>
+        </div>
+        <div class="text-ivory/70 text-xs sm:text-sm font-sans max-w-md font-light">
+          A digital monograph recording five decades of public service, corporate governance, and institutional custodianship.
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-xs uppercase font-sans tracking-widest">
+        <a class="text-ivory/70 hover:text-gold-light transition-colors" href="index.html">Home</a>
+        <a class="text-ivory/70 hover:text-gold-light transition-colors" href="about.html">About &amp; Biography</a>
+        <a class="text-ivory/70 hover:text-gold-light transition-colors" href="journey.html">Career Journey</a>
+        <a class="text-ivory/70 hover:text-gold-light transition-colors" href="leadership.html">Leadership</a>
+        <a class="text-ivory/70 hover:text-gold-light transition-colors" href="governance.html">Governance</a>
+        <a class="text-ivory/70 hover:text-gold-light transition-colors" href="contact.html">Curatorial Office</a>
+      </div>
+
+      <div class="pt-8 border-t border-burgundy/30 flex flex-col sm:flex-row items-center justify-between text-xs text-ivory/60 font-sans gap-4">
+        <p>© Estate of Kailash Nath Bhandari. All rights reserved. DIN: 00026078.</p>
+        <span class="font-mono text-[10px] text-gold-antique uppercase tracking-widest">Verified Archival Monograph</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Dialog Modal -->
+  <div id="search-modal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-ivory max-w-xl w-full border border-burgundy/40 shadow-2xl p-6 rounded-2xl relative">
+      <div class="flex items-center justify-between pb-4 border-b border-burgundy/20">
+        <div class="flex items-center space-x-2">
+          <span class="material-symbols-outlined text-burgundy">search</span>
+          <span class="text-xs uppercase tracking-widest text-burgundy font-sans font-bold">Search Archival Monograph</span>
+        </div>
+        <button onclick="closeSearchModal()" class="text-charcoal/60 hover:text-burgundy p-1">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </div>
+      <div class="mt-4">
+        <input id="search-input" type="text" placeholder="Search milestones, institutions..." class="w-full bg-parchment border border-burgundy/20 focus:border-burgundy focus:ring-1 focus:ring-burgundy p-3.5 text-sm text-charcoal placeholder:text-charcoal/50 rounded-xl outline-none"/>
+      </div>
+      <div id="search-results" class="mt-4 max-h-80 overflow-y-auto divide-y divide-burgundy/15"></div>
+      <div class="mt-4 pt-3 border-t border-burgundy/15 flex items-center justify-between text-[11px] text-charcoal/50 font-mono">
+        <span>Press ESC to dismiss</span>
+        <span>Catalog Ref: KNB-MONOGRAPH-2026</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

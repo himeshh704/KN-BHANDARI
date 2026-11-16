@@ -1,0 +1,190 @@
+/* ==========================================================================
+   K. N. BHANDARI — CINEMATIC PERSONAL LEGACY STYLES
+   Visual Identity: Burgundy (#651D2A), Deep Burgundy (#310D15),
+   Warm Ivory (#F4EFE7), Parchment (#E9DFD1), Muted Rose (#B88D89),
+   Charcoal (#252222), Antique Gold (#A98A62).
+   ========================================================================== */
+
+:root {
+  --color-burgundy-primary: #651D2A;
+  --color-burgundy-deep: #310D15;
+  --color-ivory-warm: #F4EFE7;
+  --color-parchment: #E9DFD1;
+  --color-muted-rose: #B88D89;
+  --color-charcoal: #252222;
+  --color-antique-gold: #A98A62;
+}
+
+html {
+  background-color: var(--color-ivory-warm);
+  color: var(--color-charcoal);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+/* Typography Helpers */
+.font-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-editorial {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Subtle Archival Texture */
+.texture-paper {
+  background-image: 
+    radial-gradient(var(--color-burgundy-primary) 0.35px, transparent 0.35px),
+    radial-gradient(var(--color-antique-gold) 0.35px, transparent 0.35px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+/* Organic Corner Ribbon SVG Overlay */
+.hero-ribbon-tl {
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle at 10% 10%, #651D2A 0%, #310D15 65%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.hero-ribbon-br {
+  position: absolute;
+  bottom: -160px;
+  right: -160px;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle at 90% 90%, #651D2A 0%, #310D15 60%, transparent 72%);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.85;
+  z-index: 1;
+}
+
+/* Silhouette Silhouette Canvas / Frame */
+.archival-collage-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 3px;
+  background-color: var(--color-parchment);
+  padding: 3px;
+  box-shadow: 0 20px 50px -10px rgba(49, 13, 21, 0.22);
+}
+
+.collage-cell {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-parchment);
+}
+
+.collage-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+.collage-cell:hover img {
+  transform: scale(1.04);
+}
+
+/* Duotone / Sepia Historical Filters */
+.filter-sepia-burgundy {
+  filter: sepia(0.25) contrast(1.08) brightness(0.96);
+}
+
+.filter-monochrome {
+  filter: grayscale(1) contrast(1.1) brightness(0.95);
+}
+
+/* Custom Editorial Pill Capsules (Reference 1 Inspiration) */
+.inline-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.2rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(101, 29, 42, 0.08);
+  border: 1px solid rgba(101, 29, 42, 0.18);
+  color: var(--color-burgundy-primary);
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.inline-capsule-dark {
+  background: rgba(244, 239, 231, 0.12);
+  border: 1px solid rgba(244, 239, 231, 0.25);
+  color: var(--color-ivory-warm);
+}
+
+/* Horizontal Gallery Scrollbar Hide */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Deliberate Editorial Line Dividers */
+.divider-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #A98A62 25%, #A98A62 75%, transparent);
+}
+
+.divider-burgundy {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #651D2A 30%, #651D2A 70%, transparent);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EFE7;
+}
+::-webkit-scrollbar-thumb {
+  background: #B88D89;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #651D2A;
+}
+
+/* Animation Reveal Masks */
+.reveal-mask {
+  overflow: hidden;
+}
+
+.reveal-mask > * {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

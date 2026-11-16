@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>K. N. BHANDARI — One Life. Many Chapters.</title>
+  <meta name="description" content="The life, work and enduring legacy of Mr. Kailash Nath Bhandari. A cinematic digital monograph celebrating five decades of leadership, governance, and institutional stewardship."/>
+
+  <!-- Fonts: Cormorant Garamond, Playfair Display, Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet"/>
+  
+  <!-- Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            burgundy: {
+              DEFAULT: '#651D2A',
+              primary: '#651D2A',
+              deep: '#310D15',
+              muted: '#B88D89',
+              light: '#832837'
+            },
+            ivory: {
+              DEFAULT: '#F4EFE7',
+              warm: '#F4EFE7'
+            },
+            parchment: {
+              DEFAULT: '#E9DFD1',
+              dark: '#DDD0C0'
+            },
+            charcoal: {
+              DEFAULT: '#252222',
+              soft: '#383333'
+            },
+            gold: {
+              antique: '#A98A62',
+              light: '#C4A982'
+            }
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            editorial: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Manrope"', '-apple-system', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+
+  <!-- GSAP Animation Library & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-ivory text-charcoal antialiased selection:bg-burgundy selection:text-ivory overflow-x-hidden texture-paper flex flex-col min-h-screen">
+
+  <!-- TOP MINIMAL FLOATING / FIXED NAVIGATION (Reference 1 Inspiration) -->
+  <header class="sticky top-0 w-full z-50 bg-ivory/90 backdrop-blur-md border-b border-burgundy/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between gap-6">
+      
+      <!-- Brand Stature (Guaranteed Zero Overflow) -->
+      <a class="flex items-center space-x-3 shrink-0 group focus:outline-none" href="index.html">
+        <div class="w-8 h-8 rounded-full bg-burgundy flex items-center justify-center text-ivory text-xs font-serif font-bold tracking-wider">
+          KB
+        </div>
+        <div class="flex flex-col whitespace-nowrap">
+          <span class="font-display text-xl sm:text-2xl font-bold tracking-widest uppercase text-burgundy-deep group-hover:text-burgundy transition-colors">
+            K. N. BHANDARI
+          </span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-burgundy font-sans font-semibold">
+            Institutional Legacy • 1960 — 2024
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Editorial Navigation -->
+      <nav class="hidden lg:flex items-center space-x-7">
+        <a class="text-burgundy font-semibold border-b-2 border-burgundy pb-1 text-xs uppercase tracking-widest font-sans" href="index.html">Home</a>
+        <a class="text-charcoal/80 hover:text-burgundy text-xs uppercase tracking-widest font-sans transition-colors" href="about.html">About</a>
+        <a class="text-charcoal/80 hover:text-burgundy text-xs uppercase tracking-widest font-sans transition-colors" href="journey.html">Journey</a>
+        <a class="text-charcoal/80 hover:text-burgundy text-xs uppercase tracking-widest font-sans transition-colors" href="leadership.html">Leadership</a>
+        <a class="text-charcoal/80 hover:text-burgundy text-xs uppercase tracking-widest font-sans transition-colors" href="governance.html">Governance</a>
+        <a class="text-charcoal/80 hover:text-burgundy text-xs uppercase tracking-widest font-sans transition-colors" href="contributions.html">Contributions</a>
+        <a class="text-charcoal/80 hover:text-burgundy text-xs uppercase tracking-widest font-sans transition-colors" href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Trailing Action Hub -->
+      <div class="flex items-center space-x-3.5 shrink-0">
+        <!-- Search Dialog Hotkey Button -->
+        <button onclick="openSearchModal()" title="Search Archival Record (Ctrl+K)" class="hidden sm:inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border border-burgundy/20 hover:border-burgundy text-charcoal/80 hover:text-burgundy text-xs font-sans uppercase tracking-wider transition-colors">
+          <span class="material-symbols-outlined text-[15px] text-burgundy">search</span>
+          <span>Archive</span>
+          <kbd class="ml-1 text-[9px] text-burgundy/60 font-mono">⌘K</kbd>
+        </button>
+
+        <!-- CTA Pill Button (Reference 1 Style) -->
+        <a href="contact.html" class="hidden sm:inline-flex items-center space-x-2 px-6 py-2.5 rounded-full bg-burgundy hover:bg-burgundy-deep text-ivory text-xs uppercase tracking-widest font-sans font-semibold shadow-sm transition-all duration-300 hover:shadow-md">
+          <span>Inquire</span>
+          <span class="material-symbols-outlined text-sm">north_east</span>
+        </a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button aria-label="Toggle Navigation" onclick="toggleMobileMenu()" class="lg:hidden p-2 text-burgundy hover:text-burgundy-deep focus:outline-none">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Slide-Out Editorial Drawer -->
+  <div id="mobile-drawer" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex justify-end">
+    <div class="w-80 max-w-full bg-ivory border-l border-burgundy/20 h-full p-6 shadow-2xl flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-burgundy/15">
+          <div class="flex flex-col">
+            <span class="font-display text-2xl font-bold tracking-widest uppercase text-burgundy-deep">K. N. BHANDARI</span>
+            <span class="text-[10px] text-burgundy tracking-widest uppercase font-sans">Cinematic Legacy Archive</span>
+          </div>
+          <button onclick="toggleMobileMenu()" class="p-1 text-charcoal hover:text-burgundy">
+            <span class="material-symbols-outlined text-2xl">close</span>
+          </button>
+        </div>
+
+        <nav class="flex flex-col space-y-4 mt-8">
+          <a onclick="toggleMobileMenu()" class="text-burgundy font-semibold text-xs uppercase tracking-widest font-sans py-1.5 border-b border-burgundy/20" href="index.html">Home</a>
+          <a onclick="toggleMobileMenu()" class="text-charcoal hover:text-burgundy text-xs uppercase tracking-widest font-sans py-1.5" href="about.html">About &amp; Biography</a>
+          <a onclick="toggleMobileMenu()" class="text-charcoal hover:text-burgundy text-xs uppercase tracking-widest font-sans py-1.5" href="journey.html">Career Journey</a>
+          <a onclick="toggleMobileMenu()" class="text-charcoal hover:text-burgundy text-xs uppercase tracking-widest font-sans py-1.5" href="leadership.html">Insurance Leadership</a>
+          <a onclick="toggleMobileMenu()" class="text-charcoal hover:text-burgundy text-xs uppercase tracking-widest font-sans py-1.5" href="governance.html">Corporate Governance</a>
+          <a onclick="toggleMobileMenu()" class="text-charcoal hover:text-burgundy text-xs uppercase tracking-widest font-sans py-1.5" href="contributions.html">Education &amp; Contributions</a>
+          <a onclick="toggleMobileMenu()" class="text-charcoal hover:text-burgundy text-xs uppercase tracking-widest font-sans py-1.5" href="contact.html">Curatorial Office</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-burgundy/20">
+        <a class="block w-full text-center py-3 rounded-full bg-burgundy text-ivory text-xs uppercase tracking-widest font-sans font-semibold hover:bg-burgundy-deep transition-colors" href="contact.html">
+          Transmit Inquiry
+        </a>
+        <p class="text-[10px] text-charcoal/60 text-center mt-3 uppercase tracking-wider font-mono">
+          DIN: 00026078 • Verified Estate
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-grow">
+
+    <!-- ======================================================================
+         SECTION 1: CINEMATIC HERO (EXACT COMPOSITION FROM REFERENCE IMAGE 2)
+         Occupies ~100vh on desktop with archival photo collage & typography
+         ====================================================================== -->
+    <section class="relative min-h-[calc(100vh-5rem)] flex items-center bg-ivory overflow-hidden py-12 md:py-20 border-b border-burgundy/15">
+      
+      <!-- Decorative Organic Curved Burgundy Ribbons (Reference Image 2 Top-Left and Bottom-Right Arcs) -->
+      <div class="hero-ribbon-tl hidden sm:block"></div>
+      <div class="hero-ribbon-br hidden sm:block"></div>
+
+      <!-- Subtle Neoclassical Architectural Watermark (Parliament/Rashtrapati Colonnade) -->
+      <div class="absolute inset-0 pointer-events-none opacity-[0.06] flex items-end justify-center overflow-hidden">
+        <img src="assets/images/jodhpur-campus.jpg" alt="" class="w-full h-auto object-cover filter grayscale contrast-150 scale-125"/>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <!-- LEFT SIDE: Artistic Archival Photo Collage (Reference Image 2 Layout) -->
+          <div class="lg:col-span-7 flex justify-center order-2 lg:order-1">
+            <div class="w-full max-w-xl relative">
+              
+              <!-- Silhouette Profile Frame holding authentic photo collage -->
+              <div class="relative bg-parchment p-3.5 sm:p-5 rounded-2xl shadow-[0_25px_60px_-15px_rgba(49,13,21,0.25)] border border-burgundy/25">
+                
+                <!-- Internal Mosaic Panels with thin parchment-colored dividers -->
+                <div class="grid grid-cols-12 gap-2 sm:gap-3 bg-parchment-dark p-2 rounded-xl">
+                  
+                  <!-- Panel 1: Primary Authentic Portrait (Addressing rostrum with microphone) -->
+                  <div class="col-span-7 row-span-2 hero-collage-panel relative overflow-hidden rounded-lg aspect-[4/5] bg-burgundy-deep/10 border border-burgundy/20 group">
+                    <img src="assets/images/client/kn-authentic-1.jpg" alt="Shri Kailash Nath Bhandari authentic portrait addressing national assembly" class="w-full h-full object-cover filter-sepia-burgundy group-hover:scale-105 transition-transform duration-700"/>
+                    <div class="absolute bottom-2 left-2 right-2 px-3 py-1.5 bg-burgundy-deep/90 backdrop-blur-xs text-ivory text-[10px] uppercase font-sans tracking-widest border-l-2 border-gold-antique">
+                      Shri K. N. Bhandari
+                    </div>
+                  </div>
+
+                  <!-- Panel 2: Authentic Historical Assembly (Addressing conference) -->
+                  <div class="col-span-5 hero-collage-panel relative overflow-hidden rounded-lg aspect-[4/3] bg-burgundy-deep/10 border border-burgundy/20 group">
+                    <img src="assets/images/client/kn-authentic-3.jpg" alt="Archival conference meeting" class="w-full h-full object-cover filter-monochrome group-hover:scale-105 transition-transform duration-700"/>
+                    <div class="absolute top-1.5 right-1.5 bg-black/60 px-1.5 py-0.5 rounded text-[8px] text-ivory uppercase font-mono tracking-wider">
+                      Archival
+                    </div>
+                  </div>
+
+                  <!-- Panel 3: Authentic Speaking Engagement -->
+                  <div class="col-span-5 hero-collage-panel relative overflow-hidden rounded-lg aspect-[4/3] bg-burgundy-deep/10 border border-burgundy/20 group">
+                    <img src="assets/images/client/kn-authentic-5.jpg" alt="Executive dais address" class="w-full h-full object-cover filter-sepia-burgundy group-hover:scale-105 transition-transform duration-700"/>
+                    <div class="absolute bottom-1.5 left-1.5 bg-burgundy/80 px-2 py-0.5 text-[8px] text-ivory uppercase tracking-widest font-sans">
+                      Dais Address
+                    </div>
+                  </div>
+
+                  <!-- Panel 4: Group Deliberations (Wide horizontal panel) -->
+                  <div class="col-span-8 hero-collage-panel relative overflow-hidden rounded-lg aspect-[16/9] bg-burgundy-deep/10 border border-burgundy/20 group">
+                    <img src="assets/images/client/kn-authentic-7.jpg" alt="Institutional delegates meeting" class="w-full h-full object-cover filter-monochrome group-hover:scale-105 transition-transform duration-700"/>
+                    <div class="absolute bottom-2 left-2 px-2.5 py-0.5 bg-black/70 text-ivory text-[9px] uppercase tracking-wider font-mono">
+                      Institutional Council
+                    </div>
+                  </div>
+
+                  <!-- Panel 5: Formal Document Signing / Monograph Portrait -->
+                  <div class="col-span-4 hero-collage-panel relative overflow-hidden rounded-lg aspect-[16/9] bg-burgundy-deep/10 border border-burgundy/20 group">
+                    <img src="assets/images/client/kn-authentic-2.jpg" alt="Executive ceremony" class="w-full h-full object-cover filter-sepia-burgundy group-hover:scale-105 transition-transform duration-700"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-burgundy-deep/70 via-transparent to-transparent flex items-end p-2">
+                      <span class="text-[8px] uppercase tracking-widest text-gold-light font-sans">Verified</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Archival Bottom Footnote Tag -->
+                <div class="mt-3.5 pt-2.5 border-t border-burgundy/20 flex items-center justify-between text-[11px] font-sans text-charcoal/70">
+                  <span class="uppercase tracking-widest text-burgundy font-semibold">Folio: KNB-HISTORICAL-COLLAGE</span>
+                  <span class="font-mono text-gold-antique">Authentic Client Archival Records</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE: Typography & Narrative (Exact Reference Image 2 Text Lockup) -->
+          <div class="lg:col-span-5 flex flex-col justify-center order-1 lg:order-2 space-y-6">
+            
+            <!-- Small uppercase label with lines -->
+            <div class="hero-label flex items-center space-x-3 text-burgundy">
+              <span class="w-8 h-px bg-burgundy"></span>
+              <span class="text-xs uppercase tracking-[0.3em] font-sans font-bold">PORTRAIT OF A LIFETIME</span>
+              <span class="w-8 h-px bg-burgundy"></span>
+            </div>
+
+            <!-- Main Heading (One Life. Many Chapters.) -->
+            <h1 class="text-5xl sm:text-6xl xl:text-7xl font-display font-medium text-charcoal tracking-tight leading-[1.05]">
+              <span class="block hero-title-line-1">One Life.</span>
+              <span class="block hero-title-line-2 italic text-burgundy font-normal mt-1">Many Chapters.</span>
+            </h1>
+
+            <!-- Supporting Text -->
+            <p class="hero-desc text-base sm:text-lg text-charcoal/80 font-sans font-light leading-relaxed max-w-lg">
+              The life, work and enduring legacy of Mr. Kailash Nath Bhandari — an institutional architect who steered India's premier public insurers, anchored independent boardroom governance for decades, and nurtured legal and insurance pedagogy.
+            </p>
+
+            <!-- CTA Button & Inline Metadata Badge -->
+            <div class="hero-cta-group pt-4 flex flex-wrap items-center gap-4">
+              <a href="journey.html" class="inline-flex items-center space-x-3 px-8 py-4 rounded-full bg-burgundy hover:bg-burgundy-deep text-ivory font-sans text-xs uppercase tracking-widest font-semibold shadow-lg shadow-burgundy/25 transition-all duration-300 hover:scale-105">
+                <span>View the Journey</span>
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+
+              <a href="about.html" class="inline-flex items-center space-x-2 px-6 py-4 rounded-full border border-burgundy/30 hover:border-burgundy text-burgundy font-sans text-xs uppercase tracking-widest font-semibold transition-all hover:bg-burgundy/5">
+                <span>Read Biography</span>
+              </a>
+            </div>
+
+            <!-- Curatorial Verification Stamp -->
+            <div class="pt-6 border-t border-burgundy/15 flex items-center space-x-6 text-xs text-charcoal/70 font-sans">
+              <div>
+                <span class="block font-display text-2xl font-bold text-burgundy">50+</span>
+                <span class="text-[10px] uppercase tracking-wider text-charcoal/60">Years Service</span>
+              </div>
+              <div class="w-px h-8 bg-burgundy/20"></div>
+              <div>
+                <span class="block font-display text-2xl font-bold text-burgundy">18 Yrs</span>
+                <span class="text-[10px] uppercase tracking-wider text-charcoal/60">Hindalco Board</span>
+              </div>
+              <div class="w-px h-8 bg-burgundy/20"></div>
+              <div>
+                <span class="block font-display text-2xl font-bold text-burgundy">28</span>
+                <span class="text-[10px] uppercase tracking-wider text-charcoal/60">Global Desks</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2: A LIFE OF CONTRIBUTION (Editorial Pull Quote + Layout)
+         ====================================================================== -->
+    <section class="py-24 md:py-32 bg-ivory border-b border-burgundy/15 relative">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Editorial Statement -->
+          <div class="lg:col-span-7 space-y-8 reveal-header">
+            <div class="inline-flex items-center space-x-3">
+              <span class="w-6 h-px bg-burgundy"></span>
+              <span class="text-xs uppercase tracking-[0.25em] text-burgundy font-sans font-bold">Institutional Impact</span>
+            </div>
+
+            <blockquote class="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight font-normal">
+              “Some careers are measured in years. <br/>
+              <span class="italic text-burgundy font-normal">Others are remembered through the institutions they shape.</span>”
+            </blockquote>
+
+            <p class="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed font-light max-w-2xl">
+              From presiding over United India Assurance and The New India Assurance during transformative eras of economic modernization, to serving eighteen consecutive years as an Independent Director on the Board of Hindalco Industries, Mr. Bhandari’s leadership exemplifies statutory rigor, fiduciary probity, and institutional dignity.
+            </p>
+
+            <div class="pt-4 flex items-center space-x-6 text-sm text-burgundy font-sans">
+              <div class="flex items-center space-x-2">
+                <span class="material-symbols-outlined text-gold-antique">verified</span>
+                <span class="font-semibold uppercase tracking-wider text-xs">Public Insurance Command</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <span class="material-symbols-outlined text-gold-antique">balance</span>
+                <span class="font-semibold uppercase tracking-wider text-xs">Independent Directorship</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Archival Panel Composition -->
+          <div class="lg:col-span-5 editorial-card">
+            <div class="bg-parchment p-6 rounded-2xl border border-burgundy/20 shadow-xl space-y-5">
+              <div class="aspect-[4/3] rounded-xl overflow-hidden border border-burgundy/15 bg-burgundy-deep/10">
+                <img src="assets/images/client/kn-authentic-6.jpg" alt="Mr. Kailash Nath Bhandari formal institutional portrait" class="w-full h-full object-cover filter-sepia-burgundy hover:scale-105 transition-transform duration-700"/>
+              </div>
+              <div>
+                <span class="text-[11px] uppercase tracking-widest text-burgundy font-sans font-semibold">Institutional Custodian</span>
+                <h3 class="font-display text-2xl text-charcoal mt-1">Five Decades of Fiduciary Guardianship</h3>
+                <p class="font-sans text-xs text-charcoal/70 mt-2 leading-relaxed">
+                  Conferred Bachelor of Arts (1960) and Bachelor of Laws (1962) by Jodhpur University. Dedicated a lifetime to national risk management, corporate auditing, and social education.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-burgundy/15 flex items-center justify-between text-xs font-sans">
+                <span class="text-charcoal/60 uppercase font-mono text-[10px]">Registry: 1960 — 2024</span>
+                <a href="about.html" class="text-burgundy font-semibold hover:underline flex items-center space-x-1">
+                  <span>Biography Folio</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: PROFESSIONAL MILESTONES (3 Visually Striking Cards)
+         1998–2000 United India | 2000–2002 New India | 2006–2024 Hindalco
+         ====================================================================== -->
+    <section class="py-24 md:py-32 bg-parchment/60 border-b border-burgundy/15 relative" id="milestones">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between pb-12 border-b border-burgundy/20 gap-6 reveal-header">
+          <div>
+            <span class="text-xs uppercase tracking-[0.25em] text-burgundy font-sans font-bold">Apex Responsibilities</span>
+            <h2 class="font-display text-4xl sm:text-5xl text-charcoal tracking-tight mt-2">
+              Professional Milestones
+            </h2>
+          </div>
+          <p class="font-sans text-sm sm:text-base text-charcoal/70 max-w-md font-light">
+            Decisive stewardships that shaped major public enterprises and established modern fiduciary governance standards in corporate India.
+          </p>
+        </div>
+
+        <!-- 3 Milestone Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14 milestones-grid">
+          
+          <!-- Milestone Card 1: United India Assurance -->
+          <article class="milestone-card bg-ivory rounded-2xl p-8 border border-burgundy/25 shadow-lg flex flex-col justify-between group hover:border-burgundy hover:shadow-2xl transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between pb-4 border-b border-burgundy/15">
+                <span class="font-display text-2xl font-bold text-burgundy tracking-wider">
+                  1998 — 2000
+                </span>
+                <span class="text-[10px] uppercase font-mono px-2.5 py-1 bg-burgundy/10 text-burgundy rounded-full font-semibold">
+                  Tenure I
+                </span>
+              </div>
+              <div class="my-5 aspect-video rounded-lg overflow-hidden border border-burgundy/15 bg-parchment">
+                <img src="assets/images/client/kn-authentic-3.jpg" alt="United India tenure" class="w-full h-full object-cover filter-sepia-burgundy group-hover:scale-105 transition-transform duration-700"/>
+              </div>
+              <h3 class="font-display text-2xl text-charcoal group-hover:text-burgundy transition-colors">
+                United India Assurance Company Limited
+              </h3>
+              <p class="text-xs uppercase tracking-widest text-burgundy font-sans font-semibold mt-1">
+                Chairman-cum-Managing Director
+              </p>
+              <p class="font-sans text-xs sm:text-sm text-charcoal/70 mt-3 leading-relaxed">
+                Directed total national operations, non-life technical underwritings, and institutional restructuring of India's premier public general insurer.
+              </p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-burgundy/15 flex items-center justify-between">
+              <span class="text-[11px] uppercase tracking-wider text-charcoal/60 font-sans">Public Sector Enterprise</span>
+              <a href="leadership.html#united-india" class="text-burgundy font-semibold text-xs flex items-center space-x-1 hover:underline">
+                <span>View Record</span>
+                <span class="material-symbols-outlined text-sm">north_east</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Milestone Card 2: New India Assurance -->
+          <article class="milestone-card bg-ivory rounded-2xl p-8 border border-burgundy/25 shadow-lg flex flex-col justify-between group hover:border-burgundy hover:shadow-2xl transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between pb-4 border-b border-burgundy/15">
+                <span class="font-display text-2xl font-bold text-burgundy tracking-wider">
+                  2000 — 2002
+                </span>
+                <span class="text-[10px] uppercase font-mono px-2.5 py-1 bg-burgundy/10 text-burgundy rounded-full font-semibold">
+                  Tenure II
+                </span>
+              </div>
+              <div class="my-5 aspect-video rounded-lg overflow-hidden border border-burgundy/15 bg-parchment">
+                <img src="assets/images/client/kn-authentic-5.jpg" alt="New India tenure" class="w-full h-full object-cover filter-sepia-burgundy group-hover:scale-105 transition-transform duration-700"/>
+              </div>
+              <h3 class="font-display text-2xl text-charcoal group-hover:text-burgundy transition-colors">
+                The New India Assurance Company Limited
+              </h3>
+              <p class="text-xs uppercase tracking-widest text-burgundy font-sans font-semibold mt-1">
+                Chairman-cum-Managing Director
+              </p>
+              <p class="font-sans text-xs sm:text-sm text-charcoal/70 mt-3 leading-relaxed">
+                Presided over India’s largest multinational general insurance corporation, overseeing 28 international branch operations across Asia, Africa, and Europe.
+              </p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-burgundy/15 flex items-center justify-between">
+              <span class="text-[11px] uppercase tracking-wider text-charcoal/60 font-sans">Global Indian Multinational</span>
+              <a href="leadership.html#new-india" class="text-burgundy font-semibold text-xs flex items-center space-x-1 hover:underline">
+                <span>View Record</span>
+                <span class="material-symbols-outlined text-sm">north_east</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Milestone Card 3: Hindalco Industries -->
+          <article class="milestone-card bg-ivory rounded-2xl p-8 border border-burgundy/25 shadow-lg flex flex-col justify-between group hover:border-burgundy hover:shadow-2xl transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between pb-4 border-b border-burgundy/15">
+                <span class="font-display text-2xl font-bold text-burgundy tracking-wider">
+                  2006 — 2024
+                </span>
+                <span class="text-[10px] uppercase font-mono px-2.5 py-1 bg-burgundy/10 text-burgundy rounded-full font-semibold">
+                  18 Years
+                </span>
+              </div>
+              <div class="my-5 aspect-video rounded-lg overflow-hidden border border-burgundy/15 bg-parchment">
+                <img src="assets/images/boardroom.jpg" alt="Hindalco Boardroom" class="w-full h-full object-cover filter-sepia-burgundy group-hover:scale-105 transition-transform duration-700"/>
+              </div>
+              <h3 class="font-display text-2xl text-charcoal group-hover:text-burgundy transition-colors">
+                Hindalco Industries Limited
+              </h3>
+              <p class="text-xs uppercase tracking-widest text-burgundy font-sans font-semibold mt-1">
+                Independent Director (Aditya Birla Group)
+              </p>
+              <p class="font-sans text-xs sm:text-sm text-charcoal/70 mt-3 leading-relaxed">
+                Provided eighteen consecutive years of independent board governance, audit committee vigilance, and minority shareholder advocacy through historic commodity expansions.
+              </p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-burgundy/15 flex items-center justify-between">
+              <span class="text-[11px] uppercase tracking-wider text-charcoal/60 font-sans">Fortune 500 Metals Leader</span>
+              <a href="governance.html#hindalco" class="text-burgundy font-semibold text-xs flex items-center space-x-1 hover:underline">
+                <span>View Record</span>
+                <span class="material-symbols-outlined text-sm">north_east</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: THE JOURNEY (Horizontal Archival Image Gallery)
+         Heading: “Every Chapter. A Different Responsibility.”
+         ====================================================================== -->
+    <section class="py-24 md:py-32 bg-ivory border-b border-burgundy/15 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between pb-8 gap-6 reveal-header">
+          <div>
+            <span class="text-xs uppercase tracking-[0.25em] text-burgundy font-sans font-bold">Interactive Archival Vault</span>
+            <h2 class="font-display text-4xl sm:text-5xl text-charcoal tracking-tight mt-2">
+              Every Chapter. <span class="italic text-burgundy">A Different Responsibility.</span>
+            </h2>
+          </div>
+          <!-- Gallery Controls -->
+          <div class="flex items-center space-x-3">
+            <button id="gallery-prev-btn" class="w-12 h-12 rounded-full border border-burgundy/30 hover:border-burgundy flex items-center justify-center text-burgundy hover:bg-burgundy hover:text-ivory transition-colors" aria-label="Previous Archival Photo">
+              <span class="material-symbols-outlined">arrow_back</span>
+            </button>
+            <button id="gallery-next-btn" class="w-12 h-12 rounded-full border border-burgundy/30 hover:border-burgundy flex items-center justify-center text-burgundy hover:bg-burgundy hover:text-ivory transition-colors" aria-label="Next Archival Photo">
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Scrollable Track with Authentic Photos -->
+        <div id="horizontal-gallery-track" class="flex space-x-6 overflow-x-auto no-scrollbar py-6 cursor-grab active:cursor-grabbing">
+          
+          <!-- Item 1 -->
+          <div class="shrink-0 w-80 sm:w-96 bg-parchment p-5 rounded-2xl border border-burgundy/20 shadow-md">
+            <div class="aspect-[4/3] rounded-xl overflow-hidden bg-burgundy-deep/10 border border-burgundy/15 mb-4">
+              <img src="assets/images/client/kn-authentic-1.jpg" alt="State rostrum address" class="w-full h-full object-cover filter-sepia-burgundy hover:scale-105 transition-transform duration-500"/>
+            </div>
+            <span class="text-[10px] uppercase font-mono px-2 py-0.5 bg-burgundy/10 text-burgundy font-semibold rounded">National Forum</span>
+            <h4 class="font-display text-xl text-charcoal mt-2">Executive Address to Industry</h4>
+            <p class="font-sans text-xs text-charcoal/70 mt-1">Delivering the keynote address on solvency, loss prevention, and insurance deregulation.</p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="shrink-0 w-80 sm:w-96 bg-parchment p-5 rounded-2xl border border-burgundy/20 shadow-md">
+            <div class="aspect-[4/3] rounded-xl overflow-hidden bg-burgundy-deep/10 border border-burgundy/15 mb-4">
+              <img src="assets/images/client/kn-authentic-2.jpg" alt="Institutional ceremony" class="w-full h-full object-cover filter-sepia-burgundy hover:scale-105 transition-transform duration-500"/>
+            </div>
+            <span class="text-[10px] uppercase font-mono px-2 py-0.5 bg-burgundy/10 text-burgundy font-semibold rounded">Institutional Protocol</span>
+            <h4 class="font-display text-xl text-charcoal mt-2">Bilateral Agreements &amp; Conventions</h4>
+            <p class="font-sans text-xs text-charcoal/70 mt-1">Representing India’s premier insurers at high-level corporate and statutory delegations.</p>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="shrink-0 w-80 sm:w-96 bg-parchment p-5 rounded-2xl border border-burgundy/20 shadow-md">
+            <div class="aspect-[4/3] rounded-xl overflow-hidden bg-burgundy-deep/10 border border-burgundy/15 mb-4">
+              <img src="assets/images/client/kn-authentic-3.jpg" alt="Auditorium session" class="w-full h-full object-cover filter-monochrome hover:scale-105 transition-transform duration-500"/>
+            </div>
+            <span class="text-[10px] uppercase font-mono px-2 py-0.5 bg-burgundy/10 text-burgundy font-semibold rounded">Plenary Session</span>
+            <h4 class="font-display text-xl text-charcoal mt-2">Annual General Meeting Leadership</h4>
+            <p class="font-sans text-xs text-charcoal/70 mt-1">Leading multi-stakeholder conventions addressing shareholder rights and underwriting discipline.</p>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="shrink-0 w-80 sm:w-96 bg-parchment p-5 rounded-2xl border border-burgundy/20 shadow-md">
+            <div class="aspect-[4/3] rounded-xl overflow-hidden bg-burgundy-deep/10 border border-burgundy/15 mb-4">
+              <img src="assets/images/client/kn-authentic-4.jpg" alt="Boardroom discussion" class="w-full h-full object-cover filter-sepia-burgundy hover:scale-105 transition-transform duration-500"/>
+            </div>
+            <span class="text-[10px] uppercase font-mono px-2 py-0.5 bg-burgundy/10 text-burgundy font-semibold rounded">Strategic Council</span>
+            <h4 class="font-display text-xl text-charcoal mt-2">Reinsurance &amp; Risk Syndication</h4>
+            <p class="font-sans text-xs text-charcoal/70 mt-1">Structuring national risk pools and catastrophic coverage mechanisms across GIC Re and LPA.</p>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="shrink-0 w-80 sm:w-96 bg-parchment p-5 rounded-2xl border border-burgundy/20 shadow-md">
+            <div class="aspect-[4/3] rounded-xl overflow-hidden bg-burgundy-deep/10 border border-burgundy/15 mb-4">
+              <img src="assets/images/client/kn-authentic-7.jpg" alt="Institutional delegates" class="w-full h-full object-cover filter-monochrome hover:scale-105 transition-transform duration-500"/>
+            </div>
+            <span class="text-[10px] uppercase font-mono px-2 py-0.5 bg-burgundy/10 text-burgundy font-semibold rounded">Global Reinsurance</span>
+            <h4 class="font-display text-xl text-charcoal mt-2">International Joint Ventures</h4>
+            <p class="font-sans text-xs text-charcoal/70 mt-1">Cross-border insurance governance with Kenindia Assurance Company and overseas desks.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: LEADERSHIP AND GOVERNANCE (Editorial Card Layout)
+         Deep Burgundy Cinematic Section (Reference 1 & 2 Aesthetic)
+         ====================================================================== -->
+    <section class="py-24 md:py-32 bg-burgundy-deep text-ivory border-b border-burgundy/30 relative">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        
+        <div class="max-w-3xl mb-16 reveal-header">
+          <div class="inline-flex items-center space-x-3 mb-3">
+            <span class="w-6 h-px bg-gold-antique"></span>
+            <span class="text-xs uppercase tracking-[0.25em] text-gold-antique font-sans font-bold">Stewardship Architecture</span>
+          </div>
+          <h2 class="font-display text-4xl sm:text-5xl text-ivory tracking-tight">
+            Leadership &amp; Corporate Governance
+          </h2>
+          <p class="font-sans text-sm sm:text-base text-ivory/80 font-light mt-4 leading-relaxed">
+            A dual legacy: executive command over India’s apex non-life state corporations, alongside two decades of uncompromised independent boardroom oversight.
+          </p>
+        </div>
+
+        <!-- Asymmetric Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+          
+          <!-- Card 1: Insurance Leadership (7 cols) -->
+          <div class="md:col-span-7 bg-[#3c121c] p-8 md:p-10 rounded-2xl border border-burgundy/40 shadow-xl flex flex-col justify-between editorial-card">
+            <div>
+              <span class="text-[10px] uppercase font-mono px-3 py-1 bg-burgundy/40 text-gold-light rounded-full border border-gold-antique/30">Executive Command</span>
+              <h3 class="font-display text-3xl text-ivory mt-4 mb-3">
+                Apex Non-Life Insurance Leadership
+              </h3>
+              <p class="font-sans text-sm text-ivory/80 leading-relaxed font-light">
+                Led United India Assurance (1998–2000) and The New India Assurance (2000–2002) through decisive market restructuring following insurance deregulation. Established catastrophe reserve protocols, modern underwriting frameworks, and oversaw 28 international branch networks.
+              </p>
+            </div>
+            <div class="mt-8 pt-6 border-t border-burgundy/30 flex flex-wrap gap-2 text-xs">
+              <span class="px-3 py-1 bg-burgundy-deep rounded-full border border-burgundy text-ivory/70">General Insurance Council</span>
+              <span class="px-3 py-1 bg-burgundy-deep rounded-full border border-burgundy text-ivory/70">Tariff Advisory Committee</span>
+              <span class="px-3 py-1 bg-burgundy-deep rounded-full border border-burgundy text-ivory/70">Loss Prevention Association</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Boardroom Independence (5 cols) -->
+          <div class="md:col-span-5 bg-[#3c121c] p-8 md:p-10 rounded-2xl border border-burgundy/40 shadow-xl flex flex-col justify-between editorial-card">
+            <div>
+              <span class="text-[10px] uppercase font-mono px-3 py-1 bg-burgundy/40 text-gold-light rounded-full border border-gold-antique/30">Boardroom Governance</span>
+              <h3 class="font-display text-3xl text-ivory mt-4 mb-3">
+                Eighteen Years on Hindalco Board
+              </h3>
+              <p class="font-sans text-sm text-ivory/80 leading-relaxed font-light">
+                Concluded statutory term on 29 August 2024 as Independent Director of Aditya Birla Group’s metals flagship. Anchored Audit and Remuneration Committees with uncompromising fiduciary independence.
+              </p>
+            </div>
+            <div class="mt-8 pt-6 border-t border-burgundy/30">
+              <a href="governance.html" class="inline-flex items-center space-x-2 text-gold-antique hover:text-ivory text-xs uppercase tracking-widest font-sans font-semibold">
+                <span>Explore Board Directorships</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Institutional Reinsurance (5 cols) -->
+          <div class="md:col-span-5 bg-[#3c121c] p-8 md:p-10 rounded-2xl border border-burgundy/40 shadow-xl flex flex-col justify-between editorial-card">
+            <div>
+              <span class="text-[10px] uppercase font-mono px-3 py-1 bg-burgundy/40 text-gold-light rounded-full border border-gold-antique/30">Transnational Oversight</span>
+              <h3 class="font-display text-3xl text-ivory mt-4 mb-3">
+                GIC Re &amp; Kenindia Assurance
+              </h3>
+              <p class="font-sans text-sm text-ivory/80 leading-relaxed font-light">
+                Directorships across General Insurance Corporation of India (GIC Re) shaping national retrocession, and Kenindia Assurance Company Limited supporting bilateral African-Indian risk syndication.
+              </p>
+            </div>
+            <div class="mt-8 pt-6 border-t border-burgundy/30">
+              <span class="text-[11px] text-ivory/60 uppercase font-mono">SEBI &amp; IRDAI Statutory Compliance</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Fiduciary & Audit Committees (7 cols) -->
+          <div class="md:col-span-7 bg-[#3c121c] p-8 md:p-10 rounded-2xl border border-burgundy/40 shadow-xl flex flex-col justify-between editorial-card">
+            <div>
+              <span class="text-[10px] uppercase font-mono px-3 py-1 bg-burgundy/40 text-gold-light rounded-full border border-gold-antique/30">Statutory Committees</span>
+              <h3 class="font-display text-3xl text-ivory mt-4 mb-3">
+                Audit, Risk &amp; Minority Protection
+              </h3>
+              <p class="font-sans text-sm text-ivory/80 leading-relaxed font-light">
+                Committee chairmanships across Magma HDI General Insurance, Jaiprakash Power Ventures, and national public-sector boards, safeguarding public trust, policyholder reserves, and minority shareholder equity.
+              </p>
+            </div>
+            <div class="mt-8 pt-6 border-t border-burgundy/30 flex items-center justify-between">
+              <span class="text-[11px] text-gold-antique uppercase tracking-wider font-sans">DIN: 00026078</span>
+              <a href="governance.html#committees" class="text-xs uppercase tracking-widest text-gold-light hover:text-ivory font-semibold">Committee Dossier →</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 6: BEYOND THE BOARDROOM (Education, Pedagogy, Social Impact)
+         ====================================================================== -->
+    <section class="py-24 md:py-32 bg-ivory border-b border-burgundy/15 relative">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        
+        <div class="max-w-3xl mb-16 reveal-header">
+          <div class="inline-flex items-center space-x-3 mb-3">
+            <span class="w-6 h-px bg-burgundy"></span>
+            <span class="text-xs uppercase tracking-[0.25em] text-burgundy font-sans font-bold">Civic Custodianship</span>
+          </div>
+          <h2 class="font-display text-4xl sm:text-5xl text-charcoal tracking-tight">
+            Beyond the Boardroom
+          </h2>
+          <p class="font-sans text-sm sm:text-base text-charcoal/70 font-light mt-3 leading-relaxed">
+            Lifelong commitment to education, legal-actuarial pedagogy, and community welfare rooted in the historical soil of Jodhpur, Rajasthan.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Pillar 1: NLU Jodhpur -->
+          <div class="bg-parchment p-8 rounded-2xl border border-burgundy/20 shadow-md flex flex-col justify-between editorial-card">
+            <div>
+              <div class="w-12 h-12 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy mb-6">
+                <span class="material-symbols-outlined text-2xl">school</span>
+              </div>
+              <span class="text-[10px] uppercase font-mono px-2 py-0.5 bg-burgundy/10 text-burgundy rounded font-semibold">Founder Honorary Director</span>
+              <h3 class="font-display text-2xl text-charcoal mt-3 mb-2">School of Insurance Studies, NLU Jodhpur</h3>
+              <p class="font-sans text-xs sm:text-sm text-charcoal/70 leading-relaxed font-light">
+                Pioneered India’s first dedicated insurance law and management programs at National Law University, Jodhpur, uniting statutory jurisprudence with technical actuarial practice.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-burgundy/15">
+              <a href="contributions.html#nluj" class="text-burgundy font-semibold text-xs uppercase tracking-wider flex items-center space-x-1 hover:underline">
+                <span>Academic Record</span>
+                <span class="material-symbols-outlined text-sm">north_east</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Shri Oswal Singh Sabha & Sardar School -->
+          <div class="bg-parchment p-8 rounded-2xl border border-burgundy/20 shadow-md flex flex-col justify-between editorial-card">
+            <div>
+              <div class="w-12 h-12 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy mb-6">
+                <span class="material-symbols-outlined text-2xl">account_balance</span>
+              </div>
+              <span class="text-[10px] uppercase font-mono px-2 py-0.5 bg-burgundy/10 text-burgundy rounded font-semibold">Community Custodian</span>
+              <h3 class="font-display text-2xl text-charcoal mt-3 mb-2">President, Shri Oswal Singh Sabha</h3>
+              <p class="font-sans text-xs sm:text-sm text-charcoal/70 leading-relaxed font-light">
+                Stewarded Jodhpur’s historic community institution and educational trusts, including the venerable 125-year Sardar School and Sardar Doon Public School campus.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-burgundy/15">
+              <a href="contributions.html#jodhpur" class="text-burgundy font-semibold text-xs uppercase tracking-wider flex items-center space-x-1 hover:underline">
+                <span>Civic Foundations</span>
+                <span class="material-symbols-outlined text-sm">north_east</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Netraheen Vikas Sansthan -->
+          <div class="bg-parchment p-8 rounded-2xl border border-burgundy/20 shadow-md flex flex-col justify-between editorial-card">
+            <div>
+              <div class="w-12 h-12 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy mb-6">
+                <span class="material-symbols-outlined text-2xl">visibility</span>
+              </div>
+              <span class="text-[10px] uppercase font-mono px-2 py-0.5 bg-burgundy/10 text-burgundy rounded font-semibold">Social Contribution</span>
+              <h3 class="font-display text-2xl text-charcoal mt-3 mb-2">Netraheen Vikas Sansthan (Blind School)</h3>
+              <p class="font-sans text-xs sm:text-sm text-charcoal/70 leading-relaxed font-light">
+                Dedicated patron empowering visually impaired youth in Western Rajasthan through specialized education, braille literacy, and vocational self-reliance initiatives.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-burgundy/15">
+              <a href="contributions.html#blind-school" class="text-burgundy font-semibold text-xs uppercase tracking-wider flex items-center space-x-1 hover:underline">
+                <span>Social Impact</span>
+                <span class="material-symbols-outlined text-sm">north_east</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 7: CLOSING STATEMENT
+         Large typography: “An enduring journey. A legacy beyond titles.”
+         ====================================================================== -->
+    <section class="py-28 md:py-36 bg-ivory text-center border-b border-burgundy/15 relative">
+      <div class="max-w-4xl mx-auto px-6 reveal-header">
+        
+        <div class="inline-flex items-center space-x-3 text-burgundy mb-6">
+          <span class="w-8 h-px bg-burgundy"></span>
+          <span class="text-xs uppercase tracking-[0.3em] font-sans font-bold">THE CREED</span>
+          <span class="w-8 h-px bg-burgundy"></span>
+        </div>
+
+        <h2 class="font-display text-4xl sm:text-6xl lg:text-7xl text-charcoal font-medium leading-[1.1] mb-6">
+          “An enduring journey. <br/>
+          <span class="italic text-burgundy font-normal">A legacy beyond titles.”</span>
+        </h2>
+
+        <p class="font-sans text-base sm:text-lg text-charcoal/70 font-light max-w-xl mx-auto mb-10 leading-relaxed">
+          Documenting six decades of moral authority, fiduciary excellence, and unwavering service to the institutions of the Republic of India.
+        </p>
+
+        <a href="about.html" class="inline-flex items-center space-x-3 px-9 py-4 rounded-full bg-burgundy hover:bg-burgundy-deep text-ivory font-sans text-xs uppercase tracking-widest font-semibold shadow-xl shadow-burgundy/20 transition-all duration-300 hover:scale-105">
+          <span>Discover His Story</span>
+          <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       SECTION 8: FOOTER (Minimal Dark Burgundy Footer)
+       ====================================================================== -->
+  <footer class="w-full bg-burgundy-deep text-ivory border-t border-burgundy/40">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-16 flex flex-col space-y-12">
+      
+      <!-- Top Row: Identity and Motto -->
+      <div class="flex flex-col md:flex-row md:items-center justify-between pb-8 border-b border-burgundy/30 gap-6">
+        <div>
+          <span class="font-display text-3xl font-bold tracking-widest uppercase text-ivory block">
+            K. N. BHANDARI
+          </span>
+          <span class="text-xs text-gold-light uppercase tracking-[0.25em] font-sans font-semibold block mt-1">
+            One Life. Many Chapters.
+          </span>
+        </div>
+        <div class="text-ivory/70 text-xs sm:text-sm font-sans max-w-md font-light">
+          A curated personal legacy monograph commemorating five decades of leadership, corporate governance, and institutional custodianship in India.
+        </div>
+      </div>
+
+      <!-- Footer Navigation Links -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-xs uppercase font-sans tracking-widest">
+        <a class="text-ivory/70 hover:text-gold-light transition-colors" href="about.html">About &amp; Biography</a>
+        <a class="text-ivory/70 hover:text-gold-light transition-colors" href="journey.html">Career Journey</a>
+        <a class="text-ivory/70 hover:text-gold-light transition-colors" href="leadership.html">Leadership</a>
+        <a class="text-ivory/70 hover:text-gold-light transition-colors" href="governance.html">Governance</a>
+        <a class="text-ivory/70 hover:text-gold-light transition-colors" href="contributions.html">Contributions</a>
+        <a class="text-ivory/70 hover:text-gold-light transition-colors" href="contact.html">Curatorial Office</a>
+      </div>
+
+      <!-- Bottom Row: Verification & Rights -->
+      <div class="pt-8 border-t border-burgundy/30 flex flex-col sm:flex-row items-center justify-between text-xs text-ivory/60 font-sans gap-4">
+        <p>
+          © Estate of Kailash Nath Bhandari. All rights reserved. DIN: 00026078.
+        </p>
+        <span class="font-mono text-[10px] text-gold-antique uppercase tracking-widest">
+          Verified Archival Monograph
+        </span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Archival Search Dialog Modal (Ctrl+K) -->
+  <div id="search-modal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-ivory max-w-xl w-full border border-burgundy/40 shadow-2xl p-6 rounded-2xl relative">
+      <div class="flex items-center justify-between pb-4 border-b border-burgundy/20">
+        <div class="flex items-center space-x-2">
+          <span class="material-symbols-outlined text-burgundy">search</span>
+          <span class="text-xs uppercase tracking-widest text-burgundy font-sans font-bold">Search Archival Monograph</span>
+        </div>
+        <button onclick="closeSearchModal()" class="text-charcoal/60 hover:text-burgundy p-1">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </div>
+
+      <div class="mt-4">
+        <input id="search-input" type="text" placeholder="Search milestones, institutions (e.g. Hindalco, New India, NLU Jodhpur)..." class="w-full bg-parchment border border-burgundy/20 focus:border-burgundy focus:ring-1 focus:ring-burgundy p-3.5 text-sm text-charcoal placeholder:text-charcoal/50 rounded-xl outline-none"/>
+      </div>
+
+      <div id="search-results" class="mt-4 max-h-80 overflow-y-auto divide-y divide-burgundy/15">
+        <!-- Rendered dynamically via assets/js/main.js -->
+      </div>
+
+      <div class="mt-4 pt-3 border-t border-burgundy/15 flex items-center justify-between text-[11px] text-charcoal/50 font-mono">
+        <span>Press ESC to dismiss</span>
+        <span>Catalog Ref: KNB-MONOGRAPH-2026</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
