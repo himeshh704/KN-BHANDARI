@@ -361,7 +361,51 @@
          SECTION 3: PROFESSIONAL MILESTONES (3 Visually Striking Cards)
          1998–2000 United India | 2000–2002 New India | 2006–2024 Hindalco
          ====================================================================== -->
-    <section class="py-24 md:py-32 bg-parchment/60 border-b border-burgundy/15 relative" id="milestones">
+    
+  <!-- ============================================================== -->
+  <!-- 21ST.DEV SCROLL GALLERY: ARCHIVAL VISUAL CHRONICLE             -->
+  <!-- Pinned GSAP ScrollTrigger strip-mask transition                -->
+  <!-- ============================================================== -->
+  <section class="py-12 bg-burgundy-deep text-center border-b border-burgundy/30">
+    <div class="max-w-4xl mx-auto px-6">
+      <span class="text-xs font-semibold tracking-widest uppercase text-gold-light block mb-2">Archival Retrospective</span>
+      <h2 class="font-editorial text-3xl md:text-5xl text-ivory font-bold mb-3">Visual Chronicle of Stewardship</h2>
+      <p class="font-sans text-xs md:text-sm text-ivory/70 max-w-xl mx-auto">
+        Scroll downward to traverse the archival plates from national institutions, boardroom governance, and educational foundations.
+      </p>
+    </div>
+  </section>
+
+  <section id="kn-scroll-gallery" class="relative h-screen w-full overflow-hidden bg-burgundy-deep">
+    <!-- GSAP Dynamic Image Layers -->
+    <div class="sg-slide-images absolute inset-0 h-full w-full">
+      <div class="absolute inset-0 h-full w-full">
+        <img class="sg-first-image h-full w-full object-cover origin-center" 
+             src="assets/images/client/kn-authentic-1.jpg" 
+             alt="" 
+             style="backface-visibility:hidden;transform:translate3d(0,0,0) scale(1.25);" />
+      </div>
+    </div>
+
+    <!-- 21st.dev Studio Preset Editorial Band -->
+    <div class="absolute top-1/2 left-0 z-20 w-full -translate-y-1/2 border-white/20 border-b pointer-events-none">
+      <div class="flex items-center justify-between gap-8 px-6 md:px-12 py-5">
+        <div class="flex-1 hidden md:block">
+          <p class="font-editorial text-lg md:text-2xl text-ivory tracking-wide uppercase">Archival Record</p>
+        </div>
+        <div class="relative h-10 md:h-12 flex-[2] overflow-hidden">
+          <p class="sg-title-text font-editorial text-2xl md:text-4xl text-ivory tracking-tight leading-none"></p>
+        </div>
+        <div class="flex flex-1 justify-end pointer-events-auto">
+          <a class="sg-explore-link font-sans text-xs uppercase tracking-widest text-gold-light border border-gold-light/40 hover:bg-gold-light hover:text-burgundy-deep px-5 py-2.5 transition-all duration-300" href="archive.html">
+            Explore Archive &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 md:py-32 bg-parchment/60 border-b border-burgundy/15 relative" id="milestones">
       <div class="max-w-7xl mx-auto px-6 md:px-12">
         
         <!-- Section Header -->
@@ -856,5 +900,6 @@
   </div>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/scroll-gallery.js"></script>
 </body>
 </html>

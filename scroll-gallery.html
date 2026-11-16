@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archival Scroll Gallery | K.N. Bhandari Retrospective</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            burgundy: {
+              DEFAULT: '#651D2A',
+              primary: '#651D2A',
+              deep: '#310D15',
+              muted: '#B88D89',
+              light: '#832837'
+            },
+            ivory: {
+              DEFAULT: '#F4EFE7',
+              warm: '#F4EFE7'
+            },
+            parchment: {
+              DEFAULT: '#E9DFD1',
+              dark: '#DDD0C0'
+            },
+            charcoal: {
+              DEFAULT: '#252222',
+              soft: '#383333'
+            },
+            gold: {
+              antique: '#A98A62',
+              light: '#C4A982'
+            }
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            editorial: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Manrope"', '-apple-system', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    body {
+      background-color: #1A0407;
+      color: #F4EFE7;
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+<body class="bg-burgundy-deep text-ivory">
+  <!-- Top Navigation Header -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-burgundy-deep/90 backdrop-blur-md border-b border-burgundy/30 py-4 px-6 md:px-12 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-3">
+      <span class="font-editorial text-xl font-bold tracking-tight text-ivory">K. N. BHANDARI</span>
+      <span class="text-xs uppercase tracking-widest text-gold-light border-l border-gold-light/40 pl-3">21st.dev Component</span>
+    </a>
+    <div class="flex items-center gap-6">
+      <a href="index.html" class="text-xs uppercase tracking-widest text-ivory/80 hover:text-gold-light transition-colors">Back to Overview</a>
+      <a href="archive.html" class="text-xs uppercase tracking-widest bg-burgundy hover:bg-burgundy-light text-ivory px-4 py-2 border border-burgundy/40 transition-all">Document Archive</a>
+    </div>
+  </header>
+
+  <!-- Introductory Banner -->
+  <div class="pt-32 pb-16 px-6 md:px-12 max-w-5xl mx-auto text-center">
+    <span class="text-xs font-semibold tracking-widest uppercase text-gold-light block mb-3">21st.dev Primitive • Studio Preset</span>
+    <h1 class="font-editorial text-4xl md:text-6xl text-ivory font-bold mb-4">Archival Scroll Gallery</h1>
+    <p class="font-sans text-sm md:text-base text-ivory/70 max-w-2xl mx-auto">
+      Experience the GSAP-powered horizontal strip-mask wipe transition and cinematic scale dynamics. Scroll downward to transition through the historical photographic archive.
+    </p>
+  </div>
+
+  <!-- The 21st.dev ScrollGallery Component -->
+  <section id="kn-scroll-gallery" class="relative h-screen w-full overflow-hidden bg-burgundy-deep">
+    <!-- Image Layers -->
+    <div class="sg-slide-images absolute inset-0 h-full w-full">
+      <div class="absolute inset-0 h-full w-full">
+        <img class="sg-first-image h-full w-full object-cover origin-center" 
+             src="assets/images/client/kn-authentic-1.jpg" 
+             alt="" 
+             style="backface-visibility:hidden;transform:translate3d(0,0,0) scale(1.25);" />
+      </div>
+    </div>
+
+    <!-- Editorial Center Band -->
+    <div class="absolute top-1/2 left-0 z-20 w-full -translate-y-1/2 border-white/20 border-b pointer-events-none">
+      <div class="flex items-center justify-between gap-8 px-6 md:px-12 py-5">
+        <div class="flex-1 hidden md:block">
+          <p class="font-editorial text-xl md:text-2xl text-ivory tracking-wide uppercase">Archival Plate</p>
+        </div>
+        <div class="relative h-10 md:h-12 flex-[2] overflow-hidden">
+          <p class="sg-title-text font-editorial text-2xl md:text-4xl text-ivory tracking-tight leading-none"></p>
+        </div>
+        <div class="flex flex-1 justify-end pointer-events-auto">
+          <a class="sg-explore-link font-sans text-xs uppercase tracking-widest text-gold-light border border-gold-light/40 hover:bg-gold-light hover:text-burgundy-deep px-5 py-2.5 transition-all duration-300" href="archive.html">
+            Explore Archive &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Navigation -->
+  <footer class="py-20 px-6 md:px-12 bg-[#120305] text-center border-t border-burgundy/30">
+    <p class="font-editorial text-2xl text-ivory mb-2">Kailash Nath Bhandari</p>
+    <p class="text-xs text-ivory/60 uppercase tracking-widest mb-6">Former Chairman & Managing Director, United India Insurance & New India Assurance</p>
+    <a href="index.html" class="inline-block text-xs uppercase tracking-widest text-gold-light border-b border-gold-light/50 pb-1 hover:text-ivory transition-colors">Return to Homepage &rarr;</a>
+  </footer>
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/scroll-gallery.js"></script>
+</body>
+</html>
